@@ -1,5 +1,5 @@
-INFORMACION
-===========
+mozzilla-canaima
+================
 
 Este programa descarga e instala la última versión del navegador web Firefox y
 el cliente de correo Thunderbird en su sistema Canaima GNU/Linux. Siempre
@@ -9,8 +9,7 @@ paquetes de software oficiales de la distribución.
 Utilice este instalador sólo si esta seguro que desea tener la versión
 más actualizada de Firefox y Thunderbird en su sistema.
 
-INSTALACION
-===========
+= INSTALACION =
 
 - Modo Gráfico:
 
@@ -26,8 +25,7 @@ siguiente comando:
 
 Cualquiera de los dos metos de instalación funciona bien.
 
-REQUERIMIENTOS
-==============
+= REQUERIMIENTOS =
 
 Si existe alguna falla durante la ejecución verifica que tu sistema
 tenga instalado las siguientes aplicaciones:
@@ -36,3 +34,13 @@ tenga instalado las siguientes aplicaciones:
  - dpkg
  - tar
  - gksu
+
+= REPORTAR FALLOS =
+
+Para reportar errores por favor dirigete a la siguiente dirección y describe lo
+mejor que puedas el problema:
+
+ https://github.com/erickcion/mozilla-canaima/issuesPara reportar errores por favor dirigete a la siguiente dirección y describe lo
+mejor que puedas el problema:
+
+ https://github.com/erickcion/mozilla-canaima/issues
