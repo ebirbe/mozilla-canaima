@@ -66,8 +66,7 @@ tar -xvf $DIR_TEMP/$FFX_FILE -C $DIR_INST
 tar -xvf $DIR_TEMP/$TDB_FILE -C $DIR_INST
 
 # Instalando ejecutables
-cp -f "$PWD/firefox.in" "/usr/bin/firefox"
-chmod +x "/usr/bin/firefox"
+ln -fs "$DIR_INST/firefox/firefox" "/usr/bin/firefox"
 ln -fs "$DIR_INST/thunderbird/thunderbird" "/usr/bin/thunderbird"
 
 # Desactivar cunaguaro
