@@ -22,14 +22,3 @@ DIR_EJECUT="$PWD_DIR/data"
 ARCH_EJECUT="instalador.sh"
 
 gksu "gnome-terminal -x \"'bash \"$DIR_EJECUT/$ARCH_EJECUT\"'\""
-
-xmessage -buttons Terminar -center "Mozilla-Canaima:
-
-Espero que haya salido todo bien.
-
-Si deseas reportar un error por favor dirigete a la siguiente
-direccion y describe lo mejor que puedas el problema:
-
-    https://github.com/erickcion/mozilla-canaima/issues
-
-"

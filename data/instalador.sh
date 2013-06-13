@@ -87,3 +87,19 @@ cp -f "$PWD/thunderbird.desktop.in" "/usr/share/applications/thunderbird.desktop
 
 # Actualizar menus
 update-menus
+
+# Confirmación y despedida
+echo "
+Mozilla-Canaima
+===============
+
+Terminamos, espero que haya salido todo bien.
+
+Si deseas reportar un error por favor dirigete a la siguiente
+direccion y describe lo mejor que puedas el problema:
+
+    https://github.com/erickcion/mozilla-canaima/issues
+
+INSTALACION FINALIZADA
+Presiona ENTER para terminar..."
+read dummy
