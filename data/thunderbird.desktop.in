@@ -1,0 +1,17 @@
+#!/usr/bin/env xdg-open
+
+[Desktop Entry]
+Version=1.0
+Type=Application
+Terminal=false
+Icon[es_VE]=thunderbird
+Name[es_VE]=Thunderbird
+Exec=/usr/bin/thunderbird
+Comment[es_VE]=Cliente de Correo
+Name=Thunderbird
+Comment=Cliente de Correo
+Icon=thunderbird
+Categories=Network;Email;News;GTK;
+MimeType=message/rfc822;x-scheme-handler/mailto;
+StartupWMClass=Guacharo-bin
+StartupNotify=true
