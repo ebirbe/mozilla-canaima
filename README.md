@@ -9,7 +9,7 @@ paquetes de software oficiales de la distribución.
 Utilice este instalador sólo si esta seguro que desea tener la versión
 más actualizada de Firefox y Thunderbird en su sistema.
 
-# Instalacion
+# Instalación
 
 - Modo Gráfico:
 
