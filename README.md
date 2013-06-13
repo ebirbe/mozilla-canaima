@@ -40,4 +40,4 @@ tenga instalado las siguientes aplicaciones:
 Para reportar errores por favor dirigete a la siguiente dirección y describe lo
 mejor que puedas el problema:
 
-    https://github.com/erickcion/mozilla-canaima/issues
+ - https://github.com/erickcion/mozilla-canaima/issues
