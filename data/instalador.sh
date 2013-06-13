@@ -68,17 +68,17 @@ tar -xvf $DIR_TEMP/$TDB_FILE -C $DIR_INST
 # Instalando ejecutables
 cp -f "$PWD/firefox.in" "/usr/bin/firefox"
 chmod +x "/usr/bin/firefox"
-ln -s "$DIR_INST/thunderbird/thunderbird" "/usr/bin/thunderbird"
+ln -fs "$DIR_INST/thunderbird/thunderbird" "/usr/bin/thunderbird"
 
 # Desactivar cunaguaro
 if [ -e "/usr/bin/cunaguaro" ]; then
 	rm "/usr/bin/cunaguaro"
-	ln -s "/usr/bin/firefox" "/usr/bin/cunaguaro"
+	ln -fs "/usr/bin/firefox" "/usr/bin/cunaguaro"
 fi
 # Desactivar guacharo
 if [ -e "/usr/bin/guacharo" ]; then
 	rm "/usr/bin/guacharo"
-	ln -s "/usr/bin/thunderbird" "/usr/bin/guacharo"
+	ln -fs "/usr/bin/thunderbird" "/usr/bin/guacharo"
 fi
 
 # Crear iconos en el menu
