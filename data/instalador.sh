@@ -28,14 +28,14 @@ DIR_INST="/opt/erickcion"
 
 exit_error()
 {
-		echo "
+	echo "
 Ocurrio un error!
 
 :-(
 
 Presione ENTER para salir..."
-		read x
-		exit 1
+	read x
+	exit 1
 }
 
 # Crear el directorio temporal
