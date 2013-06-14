@@ -21,4 +21,4 @@ PWD_DIR=$(dirname $0)
 DIR_EJECUT="$PWD_DIR/data"
 ARCH_EJECUT="instalador.sh"
 
-gksu "gnome-terminal --title 'Instalando Mozilla-Canaima' --hide-menubar --geometry 1024x700+0+0 -x \"'bash \"$DIR_EJECUT/$ARCH_EJECUT\"'\""
+gksu "gnome-terminal --title 'Instalando Mozilla-Canaima' --hide-menubar -x \"'bash \"$DIR_EJECUT/$ARCH_EJECUT\"'\""
