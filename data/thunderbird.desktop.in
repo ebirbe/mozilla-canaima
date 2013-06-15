@@ -13,5 +13,5 @@ Comment=Cliente de Correo
 Icon=thunderbird
 Categories=Network;Email;News;GTK;
 MimeType=message/rfc822;x-scheme-handler/mailto;
-StartupWMClass=Guacharo-bin
+StartupWMClass=Thunderbird-bin
 StartupNotify=true
