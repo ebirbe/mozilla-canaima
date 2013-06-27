@@ -65,6 +65,10 @@ fi
 tar -xvf $DIR_TEMP/$FFX_FILE -C $DIR_INST
 tar -xvf $DIR_TEMP/$TDB_FILE -C $DIR_INST
 
+# Dar permisos publicos a los archivos para permitir
+# las actualizaciones automaticas
+chmod -R a+u $DIR_INST
+
 # Instalando ejecutables
 ln -fs "$DIR_INST/firefox/firefox" "/usr/bin/firefox"
 ln -fs "$DIR_INST/thunderbird/thunderbird" "/usr/bin/thunderbird"
