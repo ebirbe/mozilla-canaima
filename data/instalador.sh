@@ -26,6 +26,18 @@ DIR_TEMP="/tmp/ffx_erickcion"
 # Directorio de instalacion
 DIR_INST="/opt/erickcion"
 
+exit_error()
+{
+	echo "
+Ocurrio un error!
+
+:-(
+
+Presione ENTER para salir..."
+	read x
+	exit 1
+}
+
 # Crear el directorio temporal
 if [ ! -d $DIR_TEMP ]; then
 	mkdir -p $DIR_TEMP
@@ -40,30 +52,42 @@ elif [ $ARQUITECTURA == "amd64" ]; then
 	TDB_URL="http://download.cdn.mozilla.net/pub/mozilla.org/thunderbird/releases/latest/linux-x86_64/es-ES"
 else
 	echo "Esta aqruitectura no es reconocida por este script"
-	exit 1
+	exit_error
 fi
 
 # Ruta firefox
 rm -f "$DIR_TEMP/es-ES"
-wget $FFX_URL -P $DIR_TEMP
+if ! wget $FFX_URL -P $DIR_TEMP; then
+	exit_error
+fi
 FFX_FILE=$(sed -ne '/firefox.*\.tar\.bz2/s/.*<a href="\([^"]*\)".*/\1/p' $DIR_TEMP/es-ES)
 # Ruta thunderbird
 rm -f "$DIR_TEMP/es-ES"
-wget $TDB_URL -P $DIR_TEMP
+if ! wget $TDB_URL -P $DIR_TEMP; then
+	exit_error
+fi
 TDB_FILE=$(sed -ne '/thunderbird.*\.tar\.bz2/s/.*<a href="\([^"]*\)".*/\1/p' $DIR_TEMP/es-ES)
 
 
 # Descargar la version mas reciente de firefox
-wget -c $FFX_URL/$FFX_FILE -P $DIR_TEMP
+if ! wget -c $FFX_URL/$FFX_FILE -P $DIR_TEMP; then
+	exit_error
+fi
 # Descargar la version mas reciente de thunderbird
-wget -c $TDB_URL/$TDB_FILE -P $DIR_TEMP
+if ! wget -c $TDB_URL/$TDB_FILE -P $DIR_TEMP; then
+	exit_error
+fi
 
 # Extraer comprimido en directorio de instalacion
 if [ ! -d $DIR_INST ]; then
 	mkdir -p $DIR_INST
 fi
-tar -xvf $DIR_TEMP/$FFX_FILE -C $DIR_INST
-tar -xvf $DIR_TEMP/$TDB_FILE -C $DIR_INST
+if ! tar -xvf $DIR_TEMP/$FFX_FILE -C $DIR_INST; then
+	exit_error
+fi
+if ! tar -xvf $DIR_TEMP/$TDB_FILE -C $DIR_INST; then
+	exit_error
+fi
 
 # Dar permisos publicos a los archivos para permitir
 # las actualizaciones automaticas
