@@ -108,6 +108,17 @@ if [ -e "/usr/bin/guacharo" ]; then
 	ln -fs "/usr/bin/thunderbird" "/usr/bin/guacharo"
 fi
 
+# Desactivar iceweasel
+if [ -e "/usr/bin/iceweasel" ]; then
+	rm "/usr/bin/iceweasel"
+	ln -fs "/usr/bin/firefox" "/usr/bin/iceweasel"
+fi
+# Desactivar icedove
+if [ -e "/usr/bin/icedove" ]; then
+	rm "/usr/bin/icedove"
+        ln -fs "/usr/bin/thunderbird" "/usr/bin/icedove"
+fi
+
 # Crear iconos en el menu
 cp -f "$PWD/firefox.desktop.in" "/usr/share/applications/firefox.desktop"
 cp -f "$PWD/thunderbird.desktop.in" "/usr/share/applications/thunderbird.desktop"
